@@ -1,7 +1,7 @@
 #include "op.hpp"
 
 
-        Op::Op(double value) : Base(){
+        Op::Op(double value){
 		val = value;
 	}
 
