@@ -14,6 +14,6 @@
 
     NegativeOpMock:NegativeOpMock() { }
 
-    NegativeOpMock:evaluate() { return 5.6; }
-    NegativeOpMock:string stringify() { return "5.6"; }
+    NegativeOpMock:evaluate() { return -5.6; }
+    NegativeOpMock:string stringify() { return "-5.6"; }
 

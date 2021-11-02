@@ -3,11 +3,24 @@
 
 #include "gtest/gtest.h"
 
-#include "op.hpp"
+#include "op.cpp"
 
 TEST(OpTest, OpEvaluateNonZero) {
     Op* test = new Op(8);
     EXPECT_EQ(test->evaluate(), 8);
 }
+
+
+TEST(OpTest, OpEvaluateZero) {
+    Op* test = new Op(0.0);
+    EXPECT_EQ(test->evaluate(), 0.0);
+}
+
+
+TEST(OpTest, OpEvaluateNegative) {
+    Op* test = new Op(-8.0);
+    EXPECT_EQ(test->evaluate(), -8.0);
+}
+
 
 #endif //__OP_TEST_HPP__

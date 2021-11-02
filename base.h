@@ -1,3 +1,6 @@
+#indef BASE_H
+#define BASE_H
+
 class Base {
     public:
         /* Constructors */
@@ -9,3 +12,4 @@ class Base {
         virtual string stringify() = 0;
 };
 
+#endif
