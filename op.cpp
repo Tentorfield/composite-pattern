@@ -5,12 +5,12 @@
 		val = value;
 	}
 
-        virtual double Op::evaluate(){
+        double Op::evaluate(){
   		return val;
 	}
 
-        virtual string Op::stringify(){
-		string_val = to_string(value);
+        string Op::stringify(){
+		string_val = to_string(val);
 	        return string_val; 	
 	}
 
