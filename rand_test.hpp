@@ -3,7 +3,7 @@
 
 #include "gtest/gtest.h"
 #include "base.hpp"
-#include "Rand.hpp"
+#include "Rand.cpp"
 #include <string>
 #include <stdlib.h>
 
