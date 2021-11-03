@@ -6,9 +6,6 @@ ADD_SUBDIRECTORY(googletest)
 
 ADD_EXECUTABLE(test
     unit_test.cpp
-    op_test.hpp
-    op.hpp
-    base.hpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)
