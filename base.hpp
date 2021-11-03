@@ -8,15 +8,10 @@ class Base {
     protected:
 	double val;
 	string str_val;
-        // Node* root;
-        // Node* left;
-        // Node* right;
         
     public:
         /* Constructors */
-        Base() { 
-	   // root = nullptr;
-	}
+        Base() { }
 
         virtual ~Base() {
 	   // delete left;

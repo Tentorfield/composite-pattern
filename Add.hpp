@@ -9,13 +9,14 @@ using namespace std;
 
 class Add : public Base {
       public: 
-      	Add();
+      	Add(Base* left, Base* right);
       	virtual double evaluate();
       	virtual std::string stringify();
       protected:
-
-	double operator1;
-	double operator2;
+	double left_val;
+	double right_val;
+	//string lhs;
+	//string rhs;
 };
 
 #endif 
