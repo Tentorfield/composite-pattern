@@ -12,8 +12,8 @@
 
         string Op::stringify(){
 		string_val = to_string(val);
-		string Zero = "0";
-		string Dot = ".";
+		char Zero = '0';
+		char Dot = '.';
 		size_t found_Zero = string_val.find_last_not_of(Zero);
 		size_t found_Dot = string_val.find_last_not_of(Dot);
       		string_val.erase(found_Zero + 1, string::npos);
