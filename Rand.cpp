@@ -17,11 +17,8 @@ string Rand::stringify(){
                 string Dot = ".";
                 size_t found_Zero = str_val.find_last_not_of(Zero);
                 size_t found_Dot = str_val.find_last_not_of(Dot);
-                if (found_Zero != string::npos){
-                        str_val.erase(found_Zero + 1);
-                }
-                if (found_Dot != string::npos){
-                        str_val.erase(found_Dot + 1);
-                }
+      		str_val.erase(found_Zero + 1, string::npos);
+      		str_val.erase(found_Dot + 1, string::npos);
+	
 	return str_val;
 }
