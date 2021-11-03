@@ -3,7 +3,7 @@
 
 #include "gtest/gtest.h"
 //#include "add.hpp"
-#include "mult.hpp"
+#include "Mult.hpp"
 
 TEST(MultTest, MultEvaluationReg){
    Op* op1 = new Op(5);
