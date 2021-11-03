@@ -4,6 +4,7 @@
 #include "gtest/gtest.h"
 //#include "add.hpp"
 #include "Mult.hpp"
+#include "Mult.cpp"
 
 TEST(MultTest, MultEvaluationReg){
    Op* op1 = new Op(5);
