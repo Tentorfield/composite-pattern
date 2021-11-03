@@ -14,12 +14,8 @@ double Rand::evaluate(){
 
 string Rand::stringify(){
 	str_val = to_string(val);
-                char Zero = '0';
-                char Dot = '.';
-                size_t found_Zero = str_val.find_last_not_of(Zero);
-                size_t found_Dot = str_val.find_last_not_of(Dot);
-      		str_val.erase(found_Zero + 1, string::npos);
-      		str_val.erase(found_Dot + 1, string::npos);
+      	str_val.erase(str_val.find_last_not_of('0') + 1, string::npos);
+      	str_val.erase(str_val.find_last_not_of('.') + 1, string::npos);
 	
 	return str_val;
 }
