@@ -23,9 +23,5 @@ string Rand::stringify(){
                 if (found_Dot != string::npos){
                         str_val.erase(found_Dot + 1);
                 }
-                else{
-                        str_val.clear();
-                }
-
 	return str_val;
 }
