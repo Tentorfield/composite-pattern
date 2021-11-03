@@ -12,11 +12,7 @@
 
         string Op::stringify(){
 		string_val = to_string(val);
-		char Zero = '0';
-		char Dot = '.';
-		size_t found_Zero = string_val.find_last_not_of(Zero);
-		size_t found_Dot = string_val.find_last_not_of(Dot);
-      		string_val.erase(found_Zero + 1, string::npos);
-      		string_val.erase(found_Dot + 1, string::npos); 
+      		string_val.erase(string_val.find_last_not_of('0') + 1, string::npos);
+      		string_val.erase(string_val.find_last_not_of('.') + 1, string::npos);
 	        return string_val; 	
 	}
