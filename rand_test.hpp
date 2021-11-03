@@ -9,14 +9,14 @@
 
 
 
-TEST(randTest, EvalutateGT101){
+TEST(randTest, EvalutateNegOneLT){
     Rand* test = new Rand();
-    EXPECT_LT(101, test->evaluate());
+    EXPECT_LT(-1, test->evaluate());
 }
 
-TEST(randTest, EvaluateLTNegOne){
+TEST(randTest, Evaluate101GT){
      Rand* test = new Rand();
-     EXPECT_GT(-1, test->evaluate());
+     EXPECT_GT(101, test->evaluate());
 }
 
 TEST(randTest, StringifyNot101){
