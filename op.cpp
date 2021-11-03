@@ -20,9 +20,6 @@
 		}
 		if (found_Dot != string::npos){
 			string_val.erase(found_Dot + 1);
-		}
-  		else{
-    			string_val.clear();
-		}         
+		}      
 	        return string_val; 	
 	}
