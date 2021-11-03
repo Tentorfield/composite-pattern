@@ -1,5 +1,5 @@
 #include "op.hpp"
-
+#include "stdlib.h"
 
         Op::Op(double value){
 		val = value;
