@@ -1,8 +1,9 @@
-#ifndef __ADD_TEST_HPP__
+#ifndef __ADD_TEST_HPP
 #define __ADD_TEST_HPP
 
 #include "gtest/gtest.h"
 #include "Add.cpp"
+#include <string>
 
 TEST(AddTest, AddEvaluationReg){
 	Op* op1 = new Op(5);
@@ -15,8 +16,8 @@ TEST(AddTest, AddEvaluationReg){
 TEST(AddTest, AddStringDecimalPlusNum){
         Op* op1 = new Op(7.5);
         Op* op2 = new Op(9);
-        std::string result = "7.5 + 9";
-	Add* test = new Add (op1, op2);
+        string result = "7.5 + 9";
+	Add* test = new Add(op1, op2);
 	EXPECT_EQ(test->stringify(), result);
 }
 
@@ -41,7 +42,7 @@ TEST(AddTest, AddStringTwoNegDec){
 	Op* op1 = new Op(-7);
 	Op* op2 = new Op(-12.5);
 	Add* test = new Add(op1, op2);
-	std::string result = "-7 + -12.5";
+	string result = "-7 + -12.5";
 	EXPECT_EQ(test->stringify(), result);
 }
 
@@ -50,7 +51,7 @@ TEST(AddTest, AddStringTwoZeroes){
 	Op* op1 = new Op(0.0);
 	Op* op2 = new Op(0.0);
 	Add* test = new Add(op1, op2);
-	std::string result = "0 + 0";
+	string result = "0 + 0";
 	EXPECT_EQ(test->stringify(), result);
 }
 

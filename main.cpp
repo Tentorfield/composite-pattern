@@ -1,12 +1,12 @@
 #include <iostream>
 
 #include "base.hpp"
-#include "op.hpp"
-#include "Add.hpp"
-#include "Pow.hpp"
-#include "Mult.hpp"
-#include "Div.hpp"
-#include "Sub.hpp"
+#include "op.cpp"
+#include "Add.cpp"
+#include "Pow.cpp"
+#include "Mult.cpp"
+#include "Div.cpp"
+#include "Sub.cpp"
 
 int main(){
     Base* three = new Op(3);
