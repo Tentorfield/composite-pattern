@@ -15,7 +15,7 @@ TEST(DivTest, DivStringDecimalDividesNum){
   Op* op1 = new Op(7.5);
   Op* op2 = new Op(2);
   string result = "7.5 / 2";
-  Mult* test = new Mult (op1, op2);
+  Div* test = new Mult (op1, op2);
   EXPECT_EQ(test->stringify(), result);
 }
 
@@ -30,7 +30,7 @@ TEST(DivTest, DivEvaluateTwoNeg){
   Op* op1 = new Op(-4);
   Op* op2 = new Op(-4);
   Div* test = new Div(op1, op2);
- EXPECT_EQ(test->evaluate(), 16);
+ EXPECT_EQ(test->evaluate(), 1);
 }
 
 TEST(DivTest, DivEvaluateNegAndPosDec){
@@ -55,5 +55,8 @@ TEST(DivTest, DivStringTwoZeroes){
   string result = "0 / 0";
  EXPECT_EQ(test->stringify(), result);
 }
+
+[  FAILED  ] DivTest.DivStringDecimalDividesNum
+[  FAILED  ] DivTest.DivEvaluateTwoNeg
 
 #endif
