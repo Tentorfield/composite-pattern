@@ -15,7 +15,7 @@ TEST(DivTest, DivStringDecimalDividesNum){
   Op* op1 = new Op(7.5);
   Op* op2 = new Op(2);
   string result = "7.5 / 2";
-  Div* test = new Mult (op1, op2);
+  Div* test = new Div(op1, op2);
   EXPECT_EQ(test->stringify(), result);
 }
 
