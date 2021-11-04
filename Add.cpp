@@ -7,7 +7,9 @@ Add::Add(Base* left, Base* right){
 	// recursively adds the values in that subtree	
         left_val = left->evaluate();
         right_val = right->evaluate();
-
+	
+	lhs = left->stringify();
+	rhs = right->stringify();
 }
 
 double Add::evaluate(){
@@ -16,8 +18,5 @@ double Add::evaluate(){
 }
 
 string Add::stringify(){
-	string op1 = to_string(left_val);
-	string op2 = to_string(right_val);
-
-	return (op1 << " " << str_val << " " << op2);
+        return lhs + " + " + rhs;
 }

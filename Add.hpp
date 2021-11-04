@@ -1,7 +1,7 @@
 #ifndef __ADD_HPP__ 
 #define __ADD_HPP__
 
-#include "base.hpp"
+//#include "op.hpp"
 #include <string>
 #include <iostream>
 
@@ -15,8 +15,10 @@ class Add : public Base {
       protected:
 	double left_val;
 	double right_val;
-	//string lhs;
-	//string rhs;
+
+	string lhs, rhs;
+	string str_val;
+	double val;
 };
 
 #endif 

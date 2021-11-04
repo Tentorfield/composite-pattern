@@ -33,7 +33,7 @@ TEST(AddTest, AddEvaluateNegAndPosDec){
 	Op* op1 = new Op(-6);
 	Op* op2 = new Op(2.5);
 	Add* test = new Add(op1, op2);
-	EXPECT_EQ(test->evaluate(), -4.5);
+	EXPECT_EQ(test->evaluate(), -3.5);
 }
 
 
@@ -47,8 +47,8 @@ TEST(AddTest, AddStringTwoNegDec){
 
 
 TEST(AddTest, AddStringTwoZeroes){
-	Op* op1 = new Op(0);
-	Op* op2 = new Op(0);
+	Op* op1 = new Op(0.0);
+	Op* op2 = new Op(0.0);
 	Add* test = new Add(op1, op2);
 	std::string result = "0 + 0";
 	EXPECT_EQ(test->stringify(), result);
