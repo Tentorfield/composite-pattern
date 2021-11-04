@@ -1,11 +1,14 @@
 #include <iostream>
 
 #include "base.hpp"
+#include "op.hpp"
+#include "Add.hpp"
+#include "Pow.hpp"
+#include "Mult.hpp"
+#include "Div.hpp"
+#include "Sub.hpp"
 
-int main() {
-    // This is a very basic main, and being able to correctly execute this main
-    // does not constitute a completed lab. Make sure you write unit tests for
-    // all the classes that you create (and can be instantiated) in this lab
+int main(){
     Base* three = new Op(3);
     Base* seven = new Op(7);
     Base* four = new Op(4);
@@ -17,3 +20,6 @@ int main() {
     std::cout << minus->stringify() << " = " << minus->evaluate() << std::endl;
     return 0;
 }
+    // This is a very basic main, and being able to correctly execute this main
+    //     // does not constitute a completed lab. Make sure you write unit tests for
+    //         // all the classes that you create (and can be instantiated) in this lab
