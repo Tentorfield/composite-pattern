@@ -55,3 +55,5 @@ TEST(DivTest, DivStringTwoZeroes){
   string result = "0 / 0";
  EXPECT_EQ(test->stringify(), result);
 }
+
+#endif
