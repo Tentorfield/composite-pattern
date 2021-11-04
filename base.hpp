@@ -4,20 +4,11 @@
 #include <string>
 using namespace std;
 
-class Base {
-    protected:
-	double val;
-	string str_val;
-        
+class Base { 
     public:
         /* Constructors */
         Base() { }
 
-        virtual ~Base() {
-	   // delete left;
-	   // delete right;
-	}
-    
         /* Pure Virtual Functions */
         virtual double evaluate() = 0;
         virtual std::string stringify() = 0;

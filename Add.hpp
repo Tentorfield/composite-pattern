@@ -17,8 +17,7 @@ class Add : public Base {
 	double right_val;
 
 	string lhs, rhs;
-	string str_val;
+	//string str_val;
 	double val;
 };
-
 #endif 

@@ -1,10 +1,9 @@
 #include "Add.hpp"
-// #include "stdlib.h"
 #include "op.hpp"
 
 Add::Add(Base* left, Base* right){
 
-       this->str_val = "+";
+        // this->str_val = "+";
 	// recursively adds the values in that subtree	
         left_val = left->evaluate();
         right_val = right->evaluate();
@@ -15,7 +14,7 @@ Add::Add(Base* left, Base* right){
 
 double Add::evaluate(){
 	this->val = left_val + right_val;
-	return val;
+	return this->val;
 }
 
 string Add::stringify(){

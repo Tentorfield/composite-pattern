@@ -2,8 +2,7 @@
 #define __MULT_TEST_HPP
 
 #include "gtest/gtest.h"
-//#include "add.hpp"
-//#include "Mult.hpp"
+#include "add_test.hpp"
 #include "Mult.cpp"
 
 TEST(MultTest, MultEvaluationReg){
@@ -17,21 +16,38 @@ TEST(MultTest, MultStringDecimalTimesNum){
   Op* op1 = new Op(7.5);
   Op* op2 = new Op(9);
   std::string result = "7.5 * 9";
-  Mult* test = new Mult (op1, op2);
+  Mult* test = new Mult(op1, op2);
   EXPECT_EQ(test->stringify(), result);
 }
 
-/*
+TEST(MultTest, MultEvaluateDecimalTimesAddNum){
+  Op* op1 = new Op(7.5);
+  Op* op2 = new Op(9);
+  Mult* test = new Mult(op1, op2);
+  Op* op3 = new Op(4);
+  Add* add = new Add(test, op3);
+  EXPECT_EQ(add->evaluate(), 71.5);
+}
+
+
 TEST(MultTest, MultStringFromAdd){
   Op* op1 = new Op(3);
   Op* op2 = new Op(4);
-  Add* add1 = new Add(op1, op2);
+  Mult* mult1 = new Mult(op1, op2);
   Op* op3 = new Op(5);
-  Mult* test = new Mult(add1, op3);
-  std::string result = "3 + 4 * 5";
+  Add* test = new Add(mult1, op3);
+  string result = "3 * 4 + 5";
   EXPECT_EQ(test->stringify(), result);
-}     
-*/
+}   
+  
+TEST(MultTest, MultEvaluateFromAdd){
+  Op* op1 = new Op(3);
+  Op* op2 = new Op(4);
+  Mult* mult1 = new Mult(op1, op2);
+  Op* op3 = new Op(5);
+  Add* test = new Add(mult1, op3);
+  EXPECT_EQ(test->evaluate(), 17);
+}
 
 TEST(MultTest, MultEvaluateZeroDec){
   Op* op1 = new Op(0.0);
