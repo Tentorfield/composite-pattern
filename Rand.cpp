@@ -1,6 +1,7 @@
 #include "Rand.hpp"
 #include "stdlib.h"
 #include <cstddef>
+#include "op.hpp"
 
 Rand::Rand(){
        this->val = rand() % 100;
