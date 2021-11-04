@@ -1,23 +1,22 @@
 #include "Add.hpp"
 // #include "stdlib.h"
 
-Add::Add(){
+Add::Add(Base* left, Base* right){
 
        this->str_val = "+";
-	// assign operands to children (operand1 = currNode->child1, etc)	
-        operand1 = 0;
-        operand2 = 0;
-
+	// recursively adds the values in that subtree	
+        left_val = left->evaluate();
+        right_val = right->evaluate();
+	
+	lhs = left->stringify();
+	rhs = right->stringify();
 }
 
 double Add::evaluate(){
-	this->val = operand1 + operand2;
+	this->val = left_val + right_val;
 	return val;
 }
 
 string Add::stringify(){
-	string op1 = to_string(operand1);
-	string op2 = to_string(operand2);
-
-	return (op1 << " " << str_val << " " << op2);
+        return lhs + " + " + rhs;
 }
