@@ -56,7 +56,4 @@ TEST(DivTest, DivStringTwoZeroes){
  EXPECT_EQ(test->stringify(), result);
 }
 
-[  FAILED  ] DivTest.DivStringDecimalDividesNum
-[  FAILED  ] DivTest.DivEvaluateTwoNeg
-
 #endif
