@@ -9,32 +9,32 @@
 
 
 
-TEST(randTest, EvalutateLT101){
+TEST(randTest, EvalutateNegOneLT){
     Rand* test = new Rand();
-    EXPECT_LT(101, test->evaluate());
+    EXPECT_LT(-1, test->evaluate());
 }
 
-TEST(randTest, EvaluateGTNegOne){
+TEST(randTest, Evaluate101GT){
      Rand* test = new Rand();
-     EXPECT_GT(test->evaluate(), -1);
+     EXPECT_GT(101, test->evaluate());
 }
 
 TEST(randTest, StringifyNot101){
     Rand* test = new Rand();
     std::string result = "101";
-    EXPECT_NE(test->stringify(), result);
+    EXPECT_NE(result, test->stringify());
 }
 
 TEST(randTest, EvauateVal83){
     srand(2);
     Rand* test = new Rand();
-    EXPECT_EQ(test->evaluate(), 90);
+    EXPECT_EQ(90, test->evaluate());
 }
 
 TEST(randTest, StringVal83){
     srand(2);
     Rand* test = new Rand();
-    EXPECT_EQ(test->stringify(), "90");
+    EXPECT_EQ("90", test->stringify());
 }
 
 

@@ -1,5 +1,6 @@
 #include "Rand.hpp"
 #include "stdlib.h"
+#include <cstddef>
 
 Rand::Rand(){
        this->val = rand() % 100;
@@ -12,5 +13,9 @@ double Rand::evaluate(){
 }
 
 string Rand::stringify(){
+	str_val = to_string(val);
+      	str_val.erase(str_val.find_last_not_of('0') + 1, string::npos);
+      	str_val.erase(str_val.find_last_not_of('.') + 1, string::npos);
+	
 	return str_val;
 }
