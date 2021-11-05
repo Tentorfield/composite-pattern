@@ -32,7 +32,7 @@ TEST(MixTest, MixTestAllPosStringify){
    Base* mult = new Mult(four, pow);
    Base* sub = new Sub(seventeen, div);
    Base* add = new Add(sub, mult);
-   string result = "17 - 6 / 2 + 4 * 3 ^ 5";
+   string result = "17 - 6 / 2 + 4 * 3 ** 5";
    EXPECT_EQ(add->stringify(), result);
 }
 
@@ -64,7 +64,7 @@ TEST(MixTest, MixTestNegValStringify){
    Base* mult = new Mult(four, pow);
    Base* sub = new Sub(negSeven, div);
    Base* add = new Add(sub, mult);
-   string result = "-7 - 6 / -2 + 4 * -3 ^ 5";
+   string result = "-7 - 6 / -2 + 4 * -3 ** 5";
    EXPECT_EQ(add->stringify(), result);
 }
 

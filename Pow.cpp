@@ -13,5 +13,5 @@ double Pow::evaluate(){
 }
 
 string Pow::stringify(){
-	return lhs + " ^ " + rhs;
+	return lhs + " ** " + rhs;
 }

@@ -36,7 +36,7 @@ TEST(PowTest, PowStringTwoPos) {
    Op* op1 = new Op(3);
    Op* op2 = new Op(4);
    Pow* test = new Pow(op1, op2);
-   std::string result = "3 ^ 4";
+   std::string result = "3 ** 4";
    EXPECT_EQ(test->stringify(), result);
 }
 
@@ -44,7 +44,7 @@ TEST(PowTest, PowStringDec){
    Op* op1 = new Op(3.5);
    Op* op2 = new Op(4);
    Pow* test = new Pow(op1, op2);
-   std::string result = "3.5 ^ 4";
+   std::string result = "3.5 ** 4";
    EXPECT_EQ(test->stringify(), result);
 }
 
@@ -53,7 +53,7 @@ TEST(PowTest, PowStringTwoNeg){
    Op* op1 = new Op(-3);
    Op* op2 = new Op(-4);
    Pow* test = new Pow(op1, op2);
-   std::string result = "-3 ^ -4";
+   std::string result = "-3 ** -4";
    EXPECT_EQ(test->stringify(), result);
 }
 
